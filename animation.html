@@ -20,12 +20,12 @@
           <div class="card-details">
             <label for="" style="opacity: 80%; ">Card Holder</label>
             <br>
-            <input class="input-inp" type="text" style="  font-size: 16px; " value="FULL NAME" READONLY />
+            <input class="input-inp" id="name1" type="text" style="  font-size: 12px; " placeholder="FULL NAME" READONLY />
           </div>
           <div class="card-expires">
             <label for="" style="opacity: 80%; ">Expires</label>
             <br>
-            <input class="input-inp" type="text" style="font-size: 16px; margin-right: -150px; " value="MM/YY" READONLY />
+            <input class="input-inp" id="info1" type="text" style="font-size: 12px; margin-right: -85px; " value="MM/YY" READONLY />
           </div>
         </div>
         <div class="atm-card-back">
@@ -33,7 +33,7 @@
           CVV
           </div>
           <div class="back-cvv">
-            <input class="input-inp" style=" text-align: right; color:black; padding-top:7px; padding-left:30px;" type="text" value="***" READONLY />
+            <input class="input-inp" id="cvvnum" style=" font-size: 15px; text-align: right; color:white; padding-top:7px; padding-left:30px;" type="text" placeholder="***" READONLY />
           </div>
         </div>
       </div>
@@ -51,19 +51,21 @@
     <div class="form-input">
       <label for="">Card Name</label>
       <br>
-      <input class="form-input-text" type="text" name="" value="">
+      <input class="form-input-text" id ="hashname" value="" onKeyUp="updatename()" onfocusout="if(document.getElementById('hhhh').placeholder=='') {document.getElementById('name1').placeholder='FULL NAME'}" type="text" name="" value="">
     </div>
     <div class="form-input">
 
       <div class="">
         <label for="">Expiration Date</label>
         <br>
-        <select class="form-input-date" name="Month">
+        <select class="form-input-date" id ="info" name="Month" onchange="updatedate()">
+          <option value="MM">MM</option>
           <option value="Jan">Jan</option>
           <option value="Feb">Feb</option>
           <option value="Mar">Mar</option>
         </select>
-        <select class="form-input-date" name="Year">
+        <select class="form-input-date" id ="info2" name="Year" onchange="updatedate()">
+            <option value="YY">YYYY</option>
           <option value="2020">2020</option>
           <option value="2021">2021</option>
           <option value="2022">2022</option>
@@ -72,7 +74,7 @@
       <div class="form-input"  style="float:right; margin-right:20px; margin-top:-45px;">
         <label for="">CVV</label>
         <br>
-        <input id="cvv-inp" onfocus="cvvbtn()"  onfocusout="notcvvbtn()" class="form-input-date"  type="button text" name="" value="">
+        <input id="cvv" onkeyup="cvvbtn()" onfocus="cvvbtn()"  onfocusout="notcvvbtn()" class="form-input-date"  type="button text" name="" value="">
       </div>
       <br>
       <button type="submit" class="sub-but" name="button">SUBMIT</button>

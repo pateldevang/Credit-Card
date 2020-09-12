@@ -84,7 +84,7 @@ text-align: right;
 }
 .input-inp{
   font-family:sans-serif;
-  font-size: 20px;
+  font-size: 19px;
   background: transparent;
   letter-spacing: 2px;
   color: White;
@@ -130,7 +130,7 @@ opacity: 70%;
   margin-top: 20px;
 }
 .back-cvv{
-  background-color: white;
+  background-color: grey;
   margin-left:10px;
   border-radius:  2px;
   width: 300px;
